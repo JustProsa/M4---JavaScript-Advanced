@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container d-flex justify-content-center">
+        <div class="navbar-container">
+          <a class="navbar-brand" href="#">Logo</a>
+          <form class="form-inline d-flex">
+            <input
+              class="form-control mr-sm-2"
+              type="text"
+              placeholder="Cerca"
+              aria-label="Cerca"
+              id="search-bar"
+            />
+            <button
+              class="btn btn-search my-2 my-sm-0"
+              type="submit"
+              id="search-button"
+            >
+              Cerca
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h1 class="text-light mb-5">Contenuto della pagina</h1>
+      <div class="row g-2 mb-5" id="imgs-album"></div>
+    </div>
+    <!-- Collegamento agli script di Bootstrap e al nostro script JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
