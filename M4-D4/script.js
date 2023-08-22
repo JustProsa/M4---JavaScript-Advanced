@@ -5,6 +5,7 @@ const getBooks = function () {
   const bookCards = document.getElementsByClassName(`book-card`);
   const addButtons = document.getElementsByClassName(`addCart`);
   const cartBody = document.querySelector(`#cart-items .row`);
+  const cartCounter = document.querySelector(`#cart-button ion-icon::after`);
 
   fetch(`https://striveschool-api.herokuapp.com/books`)
     .then((response) => response.json())
@@ -35,6 +36,7 @@ const getBooks = function () {
         const addButtonArray = Array.from(addButtons);
 
         for (let button of addButtonArray) {
+          count = 0;
           let cartItem = `
                     <div class="col-3">
                       <img src="${
@@ -50,6 +52,8 @@ const getBooks = function () {
 
           button.addEventListener(`click`, function () {
             cartBody.insertAdjacentHTML(`beforeend`, cartItem);
+            count += 1;
+            cartCounter.innerHTML = `${count}`;
           });
         }
       };
