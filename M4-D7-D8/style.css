@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  font-family: "Rubik", sans-serif;
+  color: #333 !important;
+}
+
+#main-navbar {
+  background-color: rgb(39, 39, 39) !important;
+}
+#title {
+  color: white !important;
+}
+#main-navbar form button {
+  border-color: #a90708 !important;
+  color: #a90708 !important;
+}
+#main-navbar form button:hover {
+  background-color: #a90708 !important;
+  color: white !important;
+}
+
+main .container .col-12 .card {
+  margin-top: 2rem !important;
+  border-color: #a90708 !important;
+}
