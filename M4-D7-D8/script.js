@@ -7,8 +7,12 @@ const shopFrontPage = document.querySelector(`main .container`);
 const backOfficeBtn = document.getElementById(`backoffice-btn`);
 
 const frontToBack = () => {
-  window.location.href = `back-office.html`;
+  window.location.href = `backoffice.html`;
 };
+
+const backToFront = () => {
+  window.location.href = `main.html`
+}
 
 // backOfficeBtn.addEventListener(`click`, frontToBack());
 
