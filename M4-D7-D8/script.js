@@ -6,13 +6,11 @@ const ENDPOINT = `https://striveschool-api.herokuapp.com/api/product/`;
 const shopFrontPage = document.querySelector(`main .container`);
 const backOfficeBtn = document.getElementById(`backoffice-btn`);
 
-const frontToBack = () => {
+function frontToBack() {
+  console.log(`ciao!`)
   window.location.href = `backoffice.html`;
+  
 };
-
-const backToFront = () => {
-  window.location.href = `main.html`
-}
 
 // backOfficeBtn.addEventListener(`click`, frontToBack());
 
@@ -49,7 +47,8 @@ async function fetchProducts() {
                       ${el.description}
                     </p>
                     <p class="card-text">
-                      <small class="text-body-secondary">€${el.price}</small>
+                      <p class="text-body-secondary">€${el.price}</p>
+                      <button type="button" class="btn btn-danger">Visualizza prodotto</button>
                     </p>
                   </div>
                 </div>
@@ -77,7 +76,7 @@ async function createProduct() {
         body: JSON.stringify({
           name: `Ô-KATANA LIMITED EDITION`,
           description: `IAITO KATANA DI GRANDI DIMENSIONI TIPICA DEL PERIODO NANBOKUCHO ( 1334 - 1389 ) ADATTA ALLA PRATICA DI IAIDO, KENJUTSU E NINJUTSU`,
-          imageUrl: `https://i.imgur.com/VdKj9u4.jpg`,
+          imageUrl: `assets/okatanalimited.jpg`,
           brand: `Kimetsu no yaiba`,
           price: 387.0,
         }),
@@ -115,4 +114,4 @@ async function deleteElementById(id) {
 
 fetchProducts();
 // createProduct();
-// deleteElementById(`64e7816cc034ff001403f416`);
+// deleteElementById(`64e78fc3c034ff001403f454`);
